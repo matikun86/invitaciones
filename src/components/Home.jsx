@@ -1,11 +1,11 @@
 import React from 'react';
-import yaniEnzo from '../images/yani-enzo.jpg';
+import Carousel from './Carousel';
 
-const About = () => (
+const Home = () => (
   <section>
-    <img className="full-size" src={yaniEnzo} />
+    <Carousel></Carousel>
     <p>Nos casamos... dennos dinero!</p>
   </section>
 );
 
-export default About;
+export default Home;

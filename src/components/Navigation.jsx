@@ -38,7 +38,6 @@ export default class Navigation extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem><Link to="/">Home</Link></NavItem>
-              <NavItem><Link to="/about">About</Link></NavItem>
               <NavItem><Link to="/sample">Sample</Link></NavItem>
             </Nav>
           </Collapse>
