@@ -1,17 +1,11 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  NavItem } from 'reactstrap';
 
 export default class Navigation extends React.Component {
     constructor(props) {
@@ -32,16 +26,19 @@ export default class Navigation extends React.Component {
 
     render() {
       return (
-        <Navbar color="faded" light expand="md">
-          <NavbarBrand href="/">Yani y Enzo!</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem><Link to="/">Home</Link></NavItem>
-              <NavItem><Link to="/sample">Sample</Link></NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
+        <header>
+          <h1>La boda de Yani y Enzo</h1>
+          <Navbar color="faded" light expand="md">
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav navbar>
+                <NavItem><NavLink to="/">Inicio</NavLink></NavItem>
+                <NavItem><NavLink to="/como-llegar">Como llegar?</NavLink></NavItem>
+                <NavItem><NavLink to="/rsvp">RSVP</NavLink></NavItem>
+              </Nav>
+            </Collapse>
+          </Navbar>
+        </header>
     );
   }
 }

@@ -1,2 +1,18 @@
 .full-size
   width: 100%;
+
+@media (min-width: 768px)
+  .navbar-nav
+    flex: 1 1 100%;
+    flex-direction: column;
+    justify-content: space-around;
+
+  .nav-item
+    a
+      color: green;
+
+      :hover
+        text-decoration: none;
+
+      .active
+        border-bottom: 1px solid green;
