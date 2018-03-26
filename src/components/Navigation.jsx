@@ -3,6 +3,7 @@ import {NavLink} from 'react-router-dom';
 import {
   Collapse,
   Navbar,
+  NavbarBrand,
   NavbarToggler,
   Nav,
   NavItem } from 'reactstrap';
@@ -27,8 +28,8 @@ export default class Navigation extends React.Component {
     render() {
       return (
         <header>
-          <h1>La boda de Yani y Enzo</h1>
           <Navbar color="faded" light expand="md">
+            <NavbarBrand href="/"><h2>Yani y Enzo</h2></NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav navbar>
