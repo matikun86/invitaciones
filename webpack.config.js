@@ -54,6 +54,11 @@ module.exports = {
     host: HOST
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        basename: '"/"'
+      },
+    }),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),

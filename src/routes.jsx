@@ -9,7 +9,7 @@ import ComoLlegar from './components/ComoLlegar/ComoLlegar';
 import RSVP from './components/RSVP';
 
 const Routes = () => (
-  <Router>
+  <Router basename={process.env.basename}>
     <App>
       <Route exact path="/" component={Home}/>
       <Route exact path="/como-llegar" component={ComoLlegar}/>
