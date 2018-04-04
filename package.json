@@ -12,6 +12,9 @@
     "test": "export NODE_ENV=test && jest",
     "heroku-postbuild": "npm run build"
   },
+  "engines": {
+    "yarn": "1.5.1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ReactJSResources/react-webpack-babel"
