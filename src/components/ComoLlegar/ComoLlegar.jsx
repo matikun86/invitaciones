@@ -21,6 +21,7 @@ export default class Navigation extends React.Component {
     return (
       <section className="como-llegar">
         <h3>Cómo llegar?</h3>
+        <p className="lead">Indicaciones del camino a tomar para llegar al salón.</p>
         {/* // Important! Always set the container height explicitly */}
         <div style={{ height: '100vh', width: '100%' }}>
           <GoogleMapReact

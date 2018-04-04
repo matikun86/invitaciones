@@ -1,6 +1,13 @@
 .full-size
   width: 100%;
 
+.grow
+  flex: 1 1 auto;
+  max-height: 100%;
+
+.fix
+  flex: 0 0 auto;
+
 @media (min-width: 768px)
   .navbar-nav
     flex: 1 1 100%;
@@ -9,10 +16,8 @@
 
   .nav-item
     a
-      color: green;
-
       :hover
         text-decoration: none;
 
-      .active
-        border-bottom: 1px solid green;
+      &.active
+        border-bottom: 1px solid blue;

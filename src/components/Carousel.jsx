@@ -1,31 +1,30 @@
 import React from 'react';
 
-import photo1 from '../images/20130703_224727.jpg';
-import photo2 from '../images/IMG-20130502-WA0001.jpg';
-import photo3 from '../images/IMG-20140113-WA0000.jpg';
-import photo4 from '../images/yani-enzo.jpg';
+import photo1 from '../images/913800_10200561341129414_1748448441_o.jpg';
+import photo2 from '../images/1119813_415001565283705_304764340_o.jpg';
+import photo3 from '../images/13087277_10208160871592926_2929966294085310750_o.jpg';
+import photo4 from '../images/15622298_1427197383968424_5085641906629909603_n.jpg';
+import photo5 from '../images/IMG-20130502-WA0001.jpg';
+
+const photos = [
+  photo1,
+  photo2,
+  photo3,
+  photo4,
+  photo5,
+];
 
 const Carousel = () => (
-  <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+  <div className="carousel slide mb-2 grow d-flex" id="carouselExampleIndicators" data-ride="carousel">
     <ol className="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      {_.map(photos, (photo, i) => <li key={i} data-target="#carouselExampleIndicators" data-slide-to={i} className={ i === 0 ? 'active' : ''}></li>)}
     </ol>
     <div className="carousel-inner">
-      <div className="carousel-item active">
-        <img className="d-block w-100" src={photo1} alt="First slide" />
-      </div>
-      <div className="carousel-item">
-        <img className="d-block w-100" src={photo2} alt="Second slide" />
-      </div>
-      <div className="carousel-item">
-        <img className="d-block w-100" src={photo3} alt="Third slide" />
-      </div>
-      <div className="carousel-item">
-        <img className="d-block w-100" src={photo4} alt="Third slide" />
-      </div>
+      {_.map(photos, (photo, i) =>
+        <div key={i} className={'carousel-item ' + (i === 0 ? 'active' : '')}>
+          <img className="d-block" src={photo} alt={'Slide ' + (i+1)} />
+        </div>
+      )}
     </div>
     <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
       <span className="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -29,13 +29,13 @@ export default class Navigation extends React.Component {
       return (
         <header>
           <Navbar color="faded" light expand="md">
-            <NavbarBrand href="/"><h2>Yani y Enzo</h2></NavbarBrand>
+            <NavbarBrand href="/"><h1>Yani y Enzo</h1></NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav navbar>
-                <NavItem><NavLink to="/">Inicio</NavLink></NavItem>
-                <NavItem><NavLink to="/como-llegar">Como llegar?</NavLink></NavItem>
-                <NavItem><NavLink to="/rsvp">RSVP</NavLink></NavItem>
+                <NavItem className="h6"><NavLink exact to="/">Inicio</NavLink></NavItem>
+                <NavItem className="h6"><NavLink to="/como-llegar">Como llegar?</NavLink></NavItem>
+                <NavItem className="h6"><NavLink to="/rsvp">RSVP</NavLink></NavItem>
               </Nav>
             </Collapse>
           </Navbar>
