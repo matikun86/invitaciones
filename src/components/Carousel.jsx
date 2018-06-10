@@ -1,10 +1,10 @@
 import React from 'react';
 
-import photo1 from '../images/913800_10200561341129414_1748448441_o.jpg';
-import photo2 from '../images/1119813_415001565283705_304764340_o.jpg';
-import photo3 from '../images/13087277_10208160871592926_2929966294085310750_o.jpg';
-import photo4 from '../images/15622298_1427197383968424_5085641906629909603_n.jpg';
-import photo5 from '../images/IMG-20130502-WA0001.jpg';
+import photo1 from '../images/DSCN6901.jpg';
+import photo2 from '../images/DSCN7343.jpg';
+import photo3 from '../images/IMG_20160131_194232.jpg';
+import photo4 from '../images/IMG_20160213_181302.jpg';
+import photo5 from '../images/IMG_20161018_114121.jpg';
 
 const photos = [
   photo1,
