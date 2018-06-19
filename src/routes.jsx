@@ -4,7 +4,7 @@ import {
   Route
 } from 'react-router-dom';
 import App from './app';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 import ComoLlegar from './components/ComoLlegar/ComoLlegar';
 import RSVP from './components/RSVP';
 
