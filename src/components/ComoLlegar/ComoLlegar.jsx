@@ -7,6 +7,8 @@ import MarkerInfo from './MarkerInfo/MarkerInfo';
 export default class Navigation extends React.Component {
   constructor(props) {
     super(props);
+
+    this.onConfirm = this.onConfirm.bind(this);
   }
 
   static defaultProps = {
@@ -17,12 +19,19 @@ export default class Navigation extends React.Component {
     zoom: 13
   };
 
+  onConfirm(event) {
+    alert('yaaaay!');
+    event.preventDefault();
+  }
+
   render() {
     return (
-      <section className="como-llegar">
+      <section className="como-llegar h-100 d-flex flex-column">
+        
         <h3>Cómo llegar?</h3>
+
         <p className="lead">Indicaciones del camino a tomar para llegar al salón.</p>
-        {/* // Important! Always set the container height explicitly */}
+
         <div className="map-container">
           <GoogleMapReact
             bootstrapURLKeys={{ key: 'AIzaSyAHT7kceiwbHp-uOSGG61V1X3w1dVorbQk' }}
@@ -37,6 +46,15 @@ export default class Navigation extends React.Component {
             />
           </GoogleMapReact>
         </div>
+
+        <form onSubmit={this.onConfirm}>
+          <p>Por favor confirmá tu asistencia. Solo necesitamos tu nombre y apellido.</p>
+          
+          <div className="form-group">
+            <input type="text" className="form-control" id="fullname" placeholder="Joan Manuel Serrat" required />
+          </div>
+          <button type="submit" className="btn btn-primary">Confirmar</button>
+        </form>
       </section>
     );
   }

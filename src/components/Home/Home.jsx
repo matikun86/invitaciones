@@ -1,12 +1,12 @@
 import React from 'react';
-// import { NavLink } from 'react-router-dom';
-// import { Button } from 'reactstrap';
-import Carousel from '../Carousel';
+import Carousel from '../Carousel/Carousel';
 
 const Home = () => (
-  <section className="home h-100 w-100">
+  <section className="home h-100">
     <Carousel></Carousel>
-    <div className="overlay h-100 w-100"></div>
+    <div className="overlay">
+      <p>Nos casamos y toda la bola</p>
+    </div>
   </section>
 );
 

@@ -167,7 +167,7 @@ module.exports = [
         options: {
           sourceMap: true,
           outputStyle: "expanded",
-          indentedSyntax: "sass",
+          indentedSyntax: "scss",
           includePaths: sassIncludePaths
         }
       },
@@ -209,7 +209,7 @@ module.exports = [
         options: {
           sourceMap: true,
           outputStyle: "expanded",
-          indentedSyntax: "sass",
+          indentedSyntax: "scss",
           includePaths: sassIncludePaths
         }
       },

@@ -1,0 +1,15 @@
+.home {
+    position: relative;
+
+    .overlay {
+        color: white;
+        font-size: 40px;
+        font-weight: 600;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 1;
+    }
+}
