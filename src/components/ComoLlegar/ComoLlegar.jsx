@@ -27,16 +27,13 @@ export default class Navigation extends React.Component {
   render() {
     return (
       <section className="como-llegar h-100 d-flex flex-column">
-        
-        <h3>Cómo llegar?</h3>
-
-        <p className="lead">Indicaciones del camino a tomar para llegar al salón.</p>
 
         <div className="map-container">
           <GoogleMapReact
             bootstrapURLKeys={{ key: 'AIzaSyAHT7kceiwbHp-uOSGG61V1X3w1dVorbQk' }}
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
+            options={{gestureHandling:'cooperative'}}
           >
             <MarkerInfo
               lat={this.props.center.lat}
@@ -45,11 +42,18 @@ export default class Navigation extends React.Component {
               info="El salon esta al lado de un asdasdasd"
             />
           </GoogleMapReact>
+          
+          <div className="overlay">
+            <h3>Cómo llegar?</h3>
+
+            <p className="lead">Indicaciones del camino a tomar para llegar al salón.</p>
+          </div>
+
         </div>
 
         <form onSubmit={this.onConfirm}>
           <p>Por favor confirmá tu asistencia. Solo necesitamos tu nombre y apellido.</p>
-          
+
           <div className="form-group">
             <input type="text" className="form-control" id="fullname" placeholder="Joan Manuel Serrat" required />
           </div>

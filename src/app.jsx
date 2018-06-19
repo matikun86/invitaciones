@@ -14,7 +14,9 @@ export default class App extends React.Component {
     }
 
     componentDidMount() {
-        $(this.fullPage.current).fullpage();
+        $(this.fullPage.current).fullpage({
+            slideSelector: '.full-page-slide'
+        });
     }
 
     render() {
