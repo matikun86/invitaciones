@@ -22,7 +22,7 @@ export default class Navigation extends React.Component {
 
   getMapOptions(maps) {
     return {
-      gestureHandling:'cooperative',
+      // gestureHandling:'cooperative',
       mapTypeId: maps.MapTypeId.SATELLITE,
     }
   }
