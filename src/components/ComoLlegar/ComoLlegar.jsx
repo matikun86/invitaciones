@@ -24,7 +24,7 @@ export default class Navigation extends React.Component {
 
         <ConfirmarAsistencia></ConfirmarAsistencia>
 
-        <div className="map-container">
+        <div className="map-container col p-0">
           <GoogleMapReact
             bootstrapURLKeys={{ key: 'AIzaSyAHT7kceiwbHp-uOSGG61V1X3w1dVorbQk' }}
             defaultCenter={this.props.center}
