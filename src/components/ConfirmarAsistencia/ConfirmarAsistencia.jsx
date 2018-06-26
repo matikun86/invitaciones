@@ -59,7 +59,7 @@ export default class ConfirmarAsistencia extends React.Component {
     render() {
         return (
             <section id="hire" className="confirmar-asistencia d-flex flex-row col-5 p-0">
-                <div className="align-self-center w-100">
+                <div className="align-self-center text-center w-100">
                     <h1>Contact Me</h1>
                 
                     <form onSubmit={this.onConfirm}>

@@ -49,8 +49,7 @@ export default class Navigation extends React.Component {
           </GoogleMapReact>
           
           <div className="overlay">
-            <h3>Cómo llegar?</h3>
-
+            <h1>Cómo llegar?</h1>
             <p className="lead">Indicaciones del camino a tomar para llegar al salón.</p>
           </div>
 

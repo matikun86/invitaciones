@@ -3,22 +3,34 @@
 
     .overlay {
         color: white;
-        font-size: 50px;
         font-weight: 600;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         position: absolute;
-        top: 70%;
-        left: 20%;
-        transform: translate(-50%,-50%);
+        top: 10%;
+        right: 4%;
+        white-space: nowrap;
+        text-align: right;
         z-index: 1;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        a {
+            text-decoration: none;
+        }
     }
 
     .hint-arrow {
         animation: bounce 2s infinite;
         color: white;
         position: absolute;
-        right: 50px;
-        bottom: 40px;
+        right: 3%;
+        bottom: 4%;
 
         > i {
             font-size: 80px;
