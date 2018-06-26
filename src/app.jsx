@@ -6,7 +6,7 @@ import ComoLlegar from './components/ComoLlegar/ComoLlegar';
 import 'normalize.css';
 import "styles/base/index.sass"  // Global styles
 
-import icon from 'images/wedding.png';
+import icon from './images/wedding.png';
 
 export default class App extends React.Component {
     constructor(props) {

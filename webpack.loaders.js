@@ -115,7 +115,6 @@ module.exports = [
         options: {
           limit: 10000,
           mimetype: "image/png",
-          name: "[path][name].[ext]"
         }
       }
     ]
