@@ -1,17 +1,17 @@
 import React from 'react';
 
 import photo1 from '../../images/DSCN6901.jpg';
-import photo2 from '../../images/DSCN7343.jpg';
+// import photo2 from '../../images/DSCN7343.jpg';
 import photo3 from '../../images/IMG_20160131_194232.jpg';
 import photo4 from '../../images/IMG_20160213_181302.jpg';
 import photo5 from '../../images/IMG_20161018_114121.jpg';
 
 const photos = [
-  photo1,
-  photo2,
   photo3,
-  photo4,
+  photo1,
+  // photo2,
   photo5,
+  photo4,
 ];
 
 const Carousel = () => (
