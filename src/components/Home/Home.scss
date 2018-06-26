@@ -8,7 +8,7 @@
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         position: absolute;
         top: 70%;
-        left: 25%;
+        left: 20%;
         transform: translate(-50%,-50%);
         z-index: 1;
     }
@@ -17,11 +17,11 @@
         animation: bounce 2s infinite;
         color: white;
         position: absolute;
-        right: 30px;
-        bottom: 30px;
+        right: 50px;
+        bottom: 40px;
 
         > i {
-            font-size: 50px;
+            font-size: 80px;
         }
     }
 }
