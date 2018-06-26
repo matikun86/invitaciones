@@ -31,8 +31,6 @@ export default class Navigation extends React.Component {
     return (
       <section className="como-llegar h-100 d-flex flex-row">
 
-        <ConfirmarAsistencia></ConfirmarAsistencia>
-
         <div className="map-container col p-0">
           <GoogleMapReact
             bootstrapURLKeys={{ key: 'AIzaSyAHT7kceiwbHp-uOSGG61V1X3w1dVorbQk' }}
@@ -54,6 +52,9 @@ export default class Navigation extends React.Component {
           </div>
 
         </div>
+
+        <ConfirmarAsistencia></ConfirmarAsistencia>
+
       </section>
     );
   }
