@@ -15,7 +15,7 @@ const photos = [
 ];
 
 const Carousel = () => (
-  <div className="carousel grow slide d-flex h-100" id="carouselExampleIndicators" data-ride="carousel">
+  <div className="carousel grow slide d-flex h-100" id="carouselExampleIndicators" data-ride="carousel" data-pause={false}>
     <ol className="carousel-indicators">
       {_.map(photos, (photo, i) => <li key={i} data-target="#carouselExampleIndicators" data-slide-to={i} className={ i === 0 ? 'active' : ''}></li>)}
     </ol>
