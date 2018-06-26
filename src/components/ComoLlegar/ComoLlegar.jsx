@@ -8,15 +8,24 @@ import ConfirmarAsistencia from './../ConfirmarAsistencia/ConfirmarAsistencia';
 export default class Navigation extends React.Component {
   constructor(props) {
     super(props);
+
+    this.getMapOptions = this.getMapOptions.bind(this);
   }
 
   static defaultProps = {
     center: {
-      lat: -37.936900,
+      lat: -38.036900,
       lng: -57.585318
     },
-    zoom: 13
+    zoom: 15
   };
+
+  getMapOptions(maps) {
+    return {
+      gestureHandling:'cooperative',
+      mapTypeId: maps.MapTypeId.SATELLITE,
+    }
+  }
 
   render() {
     return (
@@ -29,7 +38,7 @@ export default class Navigation extends React.Component {
             bootstrapURLKeys={{ key: 'AIzaSyAHT7kceiwbHp-uOSGG61V1X3w1dVorbQk' }}
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
-            options={{gestureHandling:'cooperative'}}
+            options={this.getMapOptions}
           >
             <MarkerInfo
               lat={this.props.center.lat}

@@ -15,7 +15,7 @@ export default class ConfirmarAsistencia extends React.Component {
         // Input Lock
         $('textarea').blur(function () {
             $('#hire textarea').each(function () {
-                $this = $(this);
+                const $this = $(this);
                 if ( this.value != '' ) {
                     $this.addClass('focused');
                     $('textarea + label + span').css({'opacity': 1});
@@ -29,7 +29,7 @@ export default class ConfirmarAsistencia extends React.Component {
 
         $('#hire .field:first-child input').blur(function () {
             $('#hire .field:first-child input').each(function () {
-                $this = $(this);
+                const $this = $(this);
                 if ( this.value != '' ) {
                     $this.addClass('focused');
                     $('.field:first-child input + label + span').css({'opacity': 1});
@@ -43,7 +43,7 @@ export default class ConfirmarAsistencia extends React.Component {
 
         $('#hire .field:nth-child(2) input').blur(function () {
             $('#hire .field:nth-child(2) input').each(function () {
-                $this = $(this);
+                const $this = $(this);
                 if ( this.value != '' ) {
                     $this.addClass('focused');
                     $('.field:nth-child(2) input + label + span').css({'opacity': 1});
