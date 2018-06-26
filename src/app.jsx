@@ -6,6 +6,8 @@ import ComoLlegar from './components/ComoLlegar/ComoLlegar';
 import 'normalize.css';
 import "styles/base/index.sass"  // Global styles
 
+import icon from 'images/wedding.png';
+
 export default class App extends React.Component {
     constructor(props) {
       super(props);
@@ -20,8 +22,11 @@ export default class App extends React.Component {
     }
 
     render() {
-      return (
-        <main ref={this.fullPage}>
+      return ([
+        <header key="header">
+            <a href="/"><img className="icon" src={icon} /></a>
+        </header>,
+        <main key="main" ref={this.fullPage}>
             <section className="section">
                 <Home />
             </section>
@@ -29,6 +34,6 @@ export default class App extends React.Component {
                 <ComoLlegar />
             </section>
         </main>
-    );
+    ]);
   }
 }

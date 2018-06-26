@@ -24,14 +24,6 @@ const Carousel = () => (
         <div key={i} className={'carousel-item h-100 w-100 ' + (i === 0 ? 'active' : '')} style={{backgroundImage: `url(${photo})`}}></div>
       )}
     </div>
-    <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span className="sr-only">Previous</span>
-    </a>
-    <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-      <span className="sr-only">Next</span>
-    </a>
   </div>
 );
 
