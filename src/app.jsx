@@ -17,7 +17,8 @@ export default class App extends React.Component {
 
     componentDidMount() {
         $(this.fullPage.current).fullpage({
-            slideSelector: '.full-page-slide'
+            slideSelector: '.full-page-slide',
+            // navigation: true,
         });
     }
 
@@ -27,10 +28,10 @@ export default class App extends React.Component {
             <a href="/"><img className="icon" src={icon} /></a>
         </header>,
         <main key="main" ref={this.fullPage}>
-            <section className="section">
+            <section className="section" data-anchor="home">
                 <Home />
             </section>
-            <section className="section">
+            <section className="section" data-anchor="mapa">
                 <ComoLlegar />
             </section>
         </main>

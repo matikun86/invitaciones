@@ -7,6 +7,10 @@ const Home = () => (
     <div className="overlay">
       <p>Nos casamos y toda la bola</p>
     </div>
+
+    <div className="hint-arrow">
+      <i className="material-icons">arrow_downward</i>
+    </div>
   </section>
 );
 
