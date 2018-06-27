@@ -16,13 +16,11 @@ export default class ConfirmarAsistencia extends React.Component {
         $('textarea').blur(function () {
             $('#hire textarea').each(function () {
                 const $this = $(this);
-                if ( this.value != '' ) {
-                    $this.addClass('focused');
-                    $('textarea + label + span').css({'opacity': 1});
+                if ( this.value !== '' ) {
+                    $this.addClass('has-value');
                 }
                 else {
-                    $this.removeClass('focused');
-                    $('textarea + label + span').css({'opacity': 0});
+                    $this.removeClass('has-value');
                 }
             });
         });
@@ -30,13 +28,11 @@ export default class ConfirmarAsistencia extends React.Component {
         $('#hire .field:first-child input').blur(function () {
             $('#hire .field:first-child input').each(function () {
                 const $this = $(this);
-                if ( this.value != '' ) {
-                    $this.addClass('focused');
-                    $('.field:first-child input + label + span').css({'opacity': 1});
+                if ( this.value !== '' ) {
+                    $this.addClass('has-value');
                 }
                 else {
-                    $this.removeClass('focused');
-                    $('.field:first-child input + label + span').css({'opacity': 0});
+                    $this.removeClass('has-value');
                 }
             });
         });
@@ -44,13 +40,11 @@ export default class ConfirmarAsistencia extends React.Component {
         $('#hire .field:nth-child(2) input').blur(function () {
             $('#hire .field:nth-child(2) input').each(function () {
                 const $this = $(this);
-                if ( this.value != '' ) {
-                    $this.addClass('focused');
-                    $('.field:nth-child(2) input + label + span').css({'opacity': 1});
+                if ( this.value !== '' ) {
+                    $this.addClass('has-value');
                 }
                 else {
-                    $this.removeClass('focused');
-                    $('.field:nth-child(2) input + label + span').css({'opacity': 0});
+                    $this.removeClass('has-value');
                 }
             });
         });
@@ -60,39 +54,39 @@ export default class ConfirmarAsistencia extends React.Component {
         return (
             <section id="hire" className="confirmar-asistencia d-flex flex-row col-5 p-0">
                 <div className="align-self-center text-center w-100">
-                    <h1>Contact Me</h1>
+                    <h1>Confirmar asistencia</h1>
                 
                     <form onSubmit={this.onConfirm}>
                         <div className="field name-box">
-                            <input type="text" id="name" placeholder="Who Are You?"/>
+                            <input type="text" id="name" placeholder="Nombre y apellido"/>
                             <label htmlFor="name">Name</label>
-                            <span className="ss-icon">check</span>
+                            <i className="icon material-icons">thumb_up</i>
                         </div>
                 
                         <div className="field email-box">
                             <input type="text" id="email" placeholder="name@email.com"/>
                             <label htmlFor="email">Email</label>
-                            <span className="ss-icon">check</span>
+                            <i className="icon material-icons">thumb_up</i>
                         </div>
                 
                         <div className="field msg-box">
-                            <textarea id="msg" rows="1" placeholder="Your message goes here..."></textarea>
+                            <textarea id="msg" rows="1" placeholder="Podés escribir un mensaje..."></textarea>
                             <label htmlFor="msg">Msg</label>
-                            <span className="ss-icon">check</span>
+                            <i className="icon material-icons">thumb_up</i>
                         </div>
 
                         <div className="d-flex radio-box btn-group btn-group-toggle" data-toggle="buttons">
                             <label className="d-flex flex-fill justify-content-center btn btn-secondary active">
                                 <input type="radio" name="options" id="option1" autoComplete="off" defaultChecked />
-                                <span className="align-self-center">Confirmar</span>
+                                <span className="align-self-center">Asistir</span>
                             </label>
                             <label className="d-flex flex-fill justify-content-center btn btn-secondary">
                                 <input type="radio" name="options" id="option2" autoComplete="off" />
-                                <span className="align-self-center">No confirmar</span>
+                                <span className="align-self-center">No asistir</span>
                             </label>
                         </div>
                 
-                        <input className="button" type="submit" value="Send" />
+                        <input className="button" type="submit" value="Enviar" />
                     </form>
                 </div>
             </section>     

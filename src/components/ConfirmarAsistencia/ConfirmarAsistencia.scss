@@ -92,25 +92,22 @@
                 margin: 0;
     
                 @include ease(333ms);
-    
-                // Checkmark
-                + span {
-                    display: block;
-                    position:absolute;
-                    top: 23px;
-                    left: 0;
-                    margin-left: 10px;
-                    transform: translateY(-50%);
-                    color:white;
-                    font-family: 'SSStandard';
-                    font-size: 2.5em;
-                    text-shadow:1px 2px 0 $dark-orange;
-                    opacity: 0;
-    
-                    @include ease(333ms);
-                }
             }
-    
+
+            .icon {
+                display: block;
+                position:absolute;
+                top: 23px;
+                left: 20px;
+                transform: translateY(-50%);
+                color:white;
+                font-size: 2.5em;
+                text-shadow:1px 2px 0 $dark-orange;
+                opacity: 0;
+
+                @include ease(333ms);
+            }
+
             // Fields
             input[type="text"],
             textarea {
@@ -129,29 +126,34 @@
     
                 &#msg {
                     resize: none;
+                    min-height: 52px;
+
                     @include ease(333ms);
                 }
     
                 // Focus and JS Toggle Class
                 &:focus,
-                &.focused {
+                &.has-value {
                     outline:none;
     
                     &#msg {
-                        padding-bottom:150px;
+                        min-height: 100px;
                     }
-    
+
                     + label {
                         width:$hover-label-width;
                         background:$orange;
-                        color:$blue;
+                        color: $blue;
                     }
                 }
-    
-                // JS Toggle Class
-                &.focused {
+
+                &.has-value {
                     + label {
-                        color: $orange;
+                        color: transparent;
+                    }
+
+                    ~ .icon {
+                        opacity: 1 !important;
                     }
                 }
             }
