@@ -59,7 +59,7 @@ export default class ConfirmarAsistencia extends React.Component {
                     <form onSubmit={this.onConfirm}>
                         <div className="field name-box">
                             <input type="text" id="name" placeholder="Nombre y apellido"/>
-                            <label htmlFor="name">Name</label>
+                            <label htmlFor="name">Nombre</label>
                             <i className="icon material-icons">thumb_up</i>
                         </div>
                 
@@ -71,7 +71,7 @@ export default class ConfirmarAsistencia extends React.Component {
                 
                         <div className="field msg-box">
                             <textarea id="msg" rows="1" placeholder="Podés escribir un mensaje..."></textarea>
-                            <label htmlFor="msg">Msg</label>
+                            <label htmlFor="msg">Mensaje</label>
                             <i className="icon material-icons">thumb_up</i>
                         </div>
 
