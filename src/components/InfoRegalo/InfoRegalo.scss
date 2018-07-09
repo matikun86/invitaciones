@@ -1,0 +1,9 @@
+.info-regalo {
+    > div {
+        width: 75%;
+
+        @media (min-width: 768px) {
+            width: 60%;
+        }
+    }
+}
