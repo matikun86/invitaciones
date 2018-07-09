@@ -9,7 +9,7 @@ const Home = () => (
       <p>El 15 de diciembre <a href="#mapa">en asdasdad</a></p>
     </div>
 
-    <a href="#mapa" className="hint-arrow">
+    <a href="#" className="hint-arrow down" onClick={() => $.fn.fullpage.moveSectionDown()}>
       <i className="material-icons">arrow_downward</i>
     </a>
   </section>

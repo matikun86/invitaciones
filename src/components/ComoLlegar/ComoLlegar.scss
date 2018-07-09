@@ -15,13 +15,35 @@
         font-weight: 600;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         position: absolute;
-        top: 20%;
+        top: 10%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translateX(-50%);
         z-index: 1;
 
         h1 { font-size: 3.15rem }
         
         p { font-size: 1.9rem }
+    }
+
+    .hint-arrow {
+        color: white;
+    }
+
+    
+    @media (max-width: 767px) {
+        .confirmar-asistencia {
+            display: none !important;
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        .hint-arrow {
+            color: #343a40;
+        }
+        
+        .confirmar-asistencia {
+            display: flex;
+        }
     }
 }

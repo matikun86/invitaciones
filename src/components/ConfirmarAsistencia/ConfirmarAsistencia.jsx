@@ -52,7 +52,7 @@ export default class ConfirmarAsistencia extends React.Component {
 
     render() {
         return (
-            <section id="hire" className="confirmar-asistencia d-flex flex-row col-5 p-0">
+            <section id="hire" className="confirmar-asistencia flex-row col col-md-5 p-0 h-100 d-flex">
                 <div className="align-self-center text-center w-100">
                     <h1>Confirmar asistencia</h1>
                 
@@ -89,7 +89,15 @@ export default class ConfirmarAsistencia extends React.Component {
                         <input className="button" type="submit" value="Enviar" />
                     </form>
                 </div>
-            </section>     
+
+                <a href="#" className="d-lg-none d-xl-none hint-arrow up text-dark" onClick={() => $.fn.fullpage.moveSectionUp()}>
+                    <i className="material-icons">arrow_upward</i>
+                </a>
+
+                <a href="#" className="d-lg-none d-xl-none hint-arrow down text-dark" onClick={() => $.fn.fullpage.moveSectionDown()}>
+                    <i className="material-icons">arrow_downward</i>
+                </a>
+            </section>
         );
     }
 }

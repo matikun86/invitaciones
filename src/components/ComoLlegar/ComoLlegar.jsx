@@ -5,7 +5,7 @@ import marker from './../../images/marker.svg';
 import MarkerInfo from './MarkerInfo/MarkerInfo';
 import ConfirmarAsistencia from './../ConfirmarAsistencia/ConfirmarAsistencia';
 
-export default class Navigation extends React.Component {
+export default class Navigation extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -29,7 +29,7 @@ export default class Navigation extends React.Component {
 
   render() {
     return (
-      <section className="como-llegar h-100 d-flex flex-row">
+      <section className="como-llegar h-100 d-flex flex-row position-relative">
 
         <div className="map-container col p-0">
           <GoogleMapReact
@@ -55,6 +55,13 @@ export default class Navigation extends React.Component {
 
         <ConfirmarAsistencia></ConfirmarAsistencia>
 
+        <a onClick={() => $.fn.fullpage.moveSectionUp()} href="#" className="hint-arrow up">
+          <i className="material-icons">arrow_upward</i>
+        </a>
+
+        <a onClick={() => $.fn.fullpage.moveSectionDown()} href="#" className="hint-arrow down">
+          <i className="material-icons">arrow_downward</i>
+        </a>
       </section>
     );
   }
