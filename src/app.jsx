@@ -31,7 +31,7 @@ export default class App extends React.Component {
     render() {
       return ([
         <header key="header">
-            <a href="/"><img className="icon" src={icon} /></a>
+            <a href="#home"><img className="icon" src={icon} /></a>
         </header>,
         <main key="main" ref={this.fullPage}>
             <section className="section" data-anchor="home">

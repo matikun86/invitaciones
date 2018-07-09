@@ -56,7 +56,7 @@ export default class ConfirmarAsistencia extends React.Component {
                 <div className="align-self-center text-center w-100">
                     <h1>Confirmar asistencia</h1>
                 
-                    <form onSubmit={this.onConfirm}>
+                    <form className="mx-auto" onSubmit={this.onConfirm}>
                         <div className="field name-box">
                             <input type="text" id="name" placeholder="Nombre y apellido"/>
                             <label htmlFor="name">Nombre</label>
