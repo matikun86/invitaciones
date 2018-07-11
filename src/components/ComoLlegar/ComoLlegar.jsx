@@ -10,6 +10,7 @@ export default class Navigation extends React.PureComponent {
     super(props);
 
     this.getMapOptions = this.getMapOptions.bind(this);
+    this.section = React.createRef();
   }
 
   static defaultProps = {
@@ -20,6 +21,22 @@ export default class Navigation extends React.PureComponent {
     zoom: 15
   };
 
+  componentDidMount() {
+    this.handleScroll();
+  }
+
+  handleScroll() {
+    this.section.current.addEventListener('touchstart', function (e) {
+        if (e.touches.length > 1) {
+          $.fn.fullpage.setAllowScrolling(false);
+        }
+    });
+    
+    this.section.current.addEventListener('touchend', function (e) {
+      $.fn.fullpage.setAllowScrolling(true);
+    });
+  }
+
   getMapOptions(maps) {
     return {
       // gestureHandling:'cooperative',
@@ -29,7 +46,7 @@ export default class Navigation extends React.PureComponent {
 
   render() {
     return (
-      <section className="como-llegar h-100 d-flex flex-row position-relative">
+      <section className="como-llegar h-100 d-flex flex-row position-relative" ref={this.section}>
 
         <div className="map-container col p-0">
           <GoogleMapReact
