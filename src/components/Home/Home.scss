@@ -7,17 +7,20 @@
         position: absolute;
         text-align: center;
         z-index: 1;
-        top: 10%;
+        top: 90px;
+
+        h1 { font-size: 2rem }
+        p { font-size: 1.3rem }
 
         @media (min-width: 768px) {
+            top: 10%;
             right: 4%;
             white-space: nowrap;
             text-align: right;
+            
+            h1 { font-size: 3.15rem }
+            p { font-size: 1.9rem }
         }
-
-        h1 { font-size: 3.15rem }
-
-        p { font-size: 1.9rem }
 
         a {
             color: #4b9aef;
