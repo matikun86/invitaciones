@@ -23,7 +23,7 @@ export default class Navigation extends React.PureComponent {
   getMapOptions(maps) {
     return {
       // gestureHandling:'cooperative',
-      mapTypeId: maps.MapTypeId.SATELLITE,
+      // mapTypeId: maps.MapTypeId.SATELLITE,
     }
   }
 
@@ -45,23 +45,9 @@ export default class Navigation extends React.PureComponent {
               info="El salon esta al lado de un asdasdasd"
             />
           </GoogleMapReact>
-          
-          <div className="overlay">
-            <h1>Cómo llegar?</h1>
-            <p className="lead">Indicaciones del camino a tomar para llegar al salón.</p>
-          </div>
-
         </div>
 
         <ConfirmarAsistencia></ConfirmarAsistencia>
-
-        <a onClick={() => $.fn.fullpage.moveSectionUp()} href="#" className="hint-arrow up">
-          <i className="material-icons">arrow_upward</i>
-        </a>
-
-        <a onClick={() => $.fn.fullpage.moveSectionDown()} href="#" className="hint-arrow down">
-          <i className="material-icons">arrow_downward</i>
-        </a>
       </section>
     );
   }

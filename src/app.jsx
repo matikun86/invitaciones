@@ -24,7 +24,9 @@ export default class App extends React.Component {
     componentDidMount() {
         $(this.fullPage.current).fullpage({
             slideSelector: '.full-page-slide',
-            normalScrollElements: '.map-container',
+            // normalScrollElements: '.map-container',
+            touchSensitivity: 50,
+            navigation: true,
         });
     }
 

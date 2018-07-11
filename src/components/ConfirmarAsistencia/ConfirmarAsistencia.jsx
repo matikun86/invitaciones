@@ -89,14 +89,6 @@ export default class ConfirmarAsistencia extends React.Component {
                         <input className="button" type="submit" value="Enviar" />
                     </form>
                 </div>
-
-                <a href="#" className="d-lg-none d-xl-none hint-arrow up text-dark" onClick={() => $.fn.fullpage.moveSectionUp()}>
-                    <i className="material-icons">arrow_upward</i>
-                </a>
-
-                <a href="#" className="d-lg-none d-xl-none hint-arrow down text-dark" onClick={() => $.fn.fullpage.moveSectionDown()}>
-                    <i className="material-icons">arrow_downward</i>
-                </a>
             </section>
         );
     }

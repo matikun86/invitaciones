@@ -4,7 +4,6 @@
     .overlay {
         color: white;
         font-weight: 600;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         position: absolute;
         text-align: center;
         z-index: 1;
@@ -21,6 +20,7 @@
         p { font-size: 1.9rem }
 
         a {
+            color: #4b9aef;
             text-decoration: none;
         }
     }
