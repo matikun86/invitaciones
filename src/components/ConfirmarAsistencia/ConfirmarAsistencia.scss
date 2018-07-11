@@ -46,11 +46,17 @@
     color:$grey;
 
     h1 {
-        margin-bottom:40px;
-        font-size:4em;
+        font-size:3em;
+        margin: 0 15% 40px;
         text-transform:uppercase;
         text-align: center;
         @include lato-1;
+
+        
+        @media (min-width: 768px) {
+            font-size:4em;
+            margin: 0 0 40px;
+        }
     }
   
     $field-height: 52px;
