@@ -9,21 +9,6 @@
         }
     }
 
-    .overlay {
-        color: white;
-        font-size: 40px;
-        font-weight: 600;
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1;
-
-        h1 { font-size: 3.15rem }
-        
-        p { font-size: 1.9rem }
-    }
-
     .hint-arrow {
         color: white;
     }

@@ -14,17 +14,45 @@ const photos = [
   photo4,
 ];
 
-const Carousel = () => (
-  <div className="carousel grow slide d-flex h-100" id="carouselExampleIndicators" data-ride="carousel" data-pause={false}>
-    <ol className="carousel-indicators">
-      {_.map(photos, (photo, i) => <li key={i} data-target="#carouselExampleIndicators" data-slide-to={i} className={ i === 0 ? 'active' : ''}></li>)}
-    </ol>
-    <div className="carousel-inner h-100">
-      {_.map(photos, (photo, i) =>
-        <div key={i} className={'carousel-item h-100 w-100 ' + (i === 0 ? 'active' : '')} style={{backgroundImage: `url(${photo})`}}></div>
-      )}
-    </div>
-  </div>
-);
+export default class Carousel extends React.PureComponent {
+  constructor(props) {
+      super(props);
+      this.state = {
+        imagesLoaded: false,
+      }
 
-export default Carousel;
+      this.imagesLoaded = 0;
+      this.onImageLoad = this.onImageLoad.bind(this);
+
+      this.loadImages();
+  }
+
+  loadImages() {
+    photos.forEach(url => $('<img/>').attr('src', url).on('load', this.onImageLoad))
+  }
+
+  onImageLoad(img) {
+    this.imagesLoaded++;
+
+    if(this.imagesLoaded === photos.length) {
+      this.setState({
+        imagesLoaded: true,
+      });
+    }
+  }
+
+  render() {
+    return (
+      (this.state.imagesLoaded && <div className="carousel grow slide d-flex h-100" id="carouselExampleIndicators" data-ride="carousel" data-pause={false}>
+        <ol className="carousel-indicators">
+          {_.map(photos, (photo, i) => <li key={i} data-target="#carouselExampleIndicators" data-slide-to={i} className={ i === 0 ? 'active' : ''}></li>)}
+        </ol>
+        <div className="carousel-inner h-100">
+          {_.map(photos, (photo, i) =>
+            <div key={i} className={'carousel-item h-100 w-100 ' + (i === 0 ? 'active' : '')} style={{backgroundImage: `url(${photo})`}}></div>
+          )}
+        </div>
+        </div>) || <div className="loading-spinner"><i className="icon material-icons">refresh</i></div>
+    )
+  }
+};
