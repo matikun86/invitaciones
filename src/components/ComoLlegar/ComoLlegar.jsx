@@ -33,7 +33,7 @@ export default class Navigation extends React.PureComponent {
     });
     
     this.section.current.addEventListener('touchend', function (e) {
-      $.fn.fullpage.setAllowScrolling(true);
+      setImmediate(() => $.fn.fullpage.setAllowScrolling(true));
     });
   }
 
