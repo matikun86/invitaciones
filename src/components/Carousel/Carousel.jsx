@@ -22,19 +22,20 @@ export default class Carousel extends React.PureComponent {
       }
 
       this.imagesLoaded = 0;
+      this.imagesToWaitFor = 2;
       this.onImageLoad = this.onImageLoad.bind(this);
 
       this.loadImages();
   }
 
   loadImages() {
-    photos.forEach(url => $('<img/>').attr('src', url).on('load', this.onImageLoad))
+    photos.slice(0,this.imagesToWaitFor).forEach(url => $('<img/>').attr('src', url).on('load', this.onImageLoad));
   }
 
   onImageLoad(img) {
     this.imagesLoaded++;
 
-    if(this.imagesLoaded === photos.length) {
+    if(this.imagesLoaded === this.imagesToWaitFor) {
       this.setState({
         imagesLoaded: true,
       });
