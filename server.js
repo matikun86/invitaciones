@@ -14,7 +14,7 @@ const sendEmail = require('./sendEmail.js');
 app.use(bodyParser.json())
 
 // serve static assets normally
-app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/docs`));
 
 // POST method route
 app.post('/email', (req, res) => {
@@ -26,7 +26,7 @@ app.post('/email', (req, res) => {
 // handle every other route with index.html, which will contain
 // a script tag to your application's JavaScript file(s).
 app.get('*', (request, response) => {
-  response.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+  response.sendFile(path.resolve(__dirname, 'docs', 'index.html'));
 });
 
 app.listen(port);
