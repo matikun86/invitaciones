@@ -13,6 +13,7 @@
     "heroku-postbuild": "npm run build"
   },
   "engines": {
+    "node": "8.11.4",
     "yarn": "1.5.1"
   },
   "repository": {
