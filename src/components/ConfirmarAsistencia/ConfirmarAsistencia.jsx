@@ -14,6 +14,12 @@ export default class ConfirmarAsistencia extends React.Component {
             data[key] = value;
         });
 
+        if(_.isEmpty(data.name)) {
+            alert('Por favor ingresá tu nombre.');
+            event.preventDefault();
+            return;
+        }
+
         fetch('/email', {
             method: 'POST',
             body: JSON.stringify(data), // data can be `string` or {object}!
