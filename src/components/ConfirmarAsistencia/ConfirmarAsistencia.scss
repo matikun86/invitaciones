@@ -190,15 +190,23 @@
             letter-spacing: 0.1em;
             @include lato-3;
             @include ease;
-            
-            &:hover {
-                background:$blue;
-                color:$orange;
+
+            &:disabled {
+                opacity: .65;
+                cursor: default;
             }
-    
-            &:focus {
-                outline:none;
-                background:$dark-orange;
+            
+            &:not(:disabled) {
+                cursor: pointer;
+                &:hover {
+                    background:$blue;
+                    color:$orange;
+                }
+        
+                &:focus {
+                    outline:none;
+                    background:$dark-orange;
+                }
             }
         }
     }

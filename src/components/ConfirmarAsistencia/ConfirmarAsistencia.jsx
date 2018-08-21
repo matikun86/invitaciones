@@ -3,6 +3,11 @@ import React from 'react';
 export default class ConfirmarAsistencia extends React.Component {
     constructor(props) {
         super(props);
+
+        this.state = {
+            loading: false,
+        };
+
         this.onConfirm = this.onConfirm.bind(this);
     }
 
@@ -20,6 +25,10 @@ export default class ConfirmarAsistencia extends React.Component {
             return;
         }
 
+        this.setState({
+            loading: true
+        });
+
         fetch('/email', {
             method: 'POST',
             body: JSON.stringify(data), // data can be `string` or {object}!
@@ -35,7 +44,13 @@ export default class ConfirmarAsistencia extends React.Component {
                 }
             })
             .catch(error => alert('Ocurrió un error. Por favor confirmá tu presencia por otro medio.'))
-            .finally(() => form.reset())
+            .finally(() => {
+                form.reset();
+                this.setState({
+                    loading: false
+                });
+                document.querySelectorAll('#hire .has-value').forEach($el => $el.classList.remove('has-value'));
+            })
 
         event.preventDefault();
     }
@@ -114,8 +129,8 @@ export default class ConfirmarAsistencia extends React.Component {
                                 <span className="align-self-center">No asistir</span>
                             </label>
                         </div>
-                
-                        <input className="button" type="submit" value="Enviar" />
+                    
+                        <input className="button" type="submit" value="Enviar" disabled={this.state.loading} />
                     </form>
                 </div>
             </section>
