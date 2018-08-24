@@ -1,14 +1,16 @@
 import React from 'react';
+import piggyBank from './../../images/piggy-bank.png';
 
 const InfoRegalo = () => (
   <section className="info-regalo h-100 position-relative d-flex flex-row">
 
     <div className="align-self-center text-center mx-auto">
-        <h3>Sobre el regalo</h3>
-        <p>Un regalo no es necesario pero si nos quieren dar toda la papa, en el salón vamos a tener una caja donde pueden poner un sobre o si es más fácil una trasnferencia a la cuenta de Mati :)</p>
+        <h2>En caso de regalo use el chanchito </h2>
+        <img className="piggy-bank mt-3 mb-4" src={piggyBank} />
+        <p>No tenedremos lista de regalos, pero en el salon vamos a tener una caja para quien quiera colaborar con nuestra luna de miel</p>
     </div>
 
-    <a onClick={() => $.fn.fullpage.moveSectionUp()} href="#" className="hint-arrow up text-dark">
+    <a href="#" className="hint-arrow up text-dark" onClick={() => $.fn.fullpage.moveSectionUp()}>
       <i className="material-icons">arrow_upward</i>
     </a>
   </section>

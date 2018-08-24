@@ -59,7 +59,7 @@ export default class Navigation extends React.PureComponent {
               lat={this.props.center.lat}
               lng={this.props.center.lng}
               image={marker}
-              info="El salon esta al lado de un asdasdasd"
+              info="Mar Eventos (Mirador 9), Ruta 11 paraje Alfar."
             />
           </GoogleMapReact>
         </div>

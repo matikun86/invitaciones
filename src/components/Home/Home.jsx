@@ -6,8 +6,13 @@ const Home = () => (
     <Carousel></Carousel>
     
     <div className="overlay">
-      <h1>Nos casamos y toda la bola</h1>
-      <p>El 15 de diciembre <a href="#mapa">en asdasdad</a></p>
+      <h1>Nos casamos! Y decidimos viajar para festejarlo con vos.</h1>
+      <p>15 de Diciembre 20hs - Ceremonia y Fiesta: <a href="#mapa">Mar Eventos (Mirador 9)</a></p>
+      <p>
+        <a href="#asistencia" class="d-inline-block d-md-none">Confirmanos tu presencia</a>
+        <a href="#mapa" class="d-none d-md-inline-block">Confirmanos tu presencia</a>
+        &nbsp;antes del 09 Noviembre.
+      </p>
     </div>
 
     <a href="#" className="hint-arrow down" onClick={() => $.fn.fullpage.moveSectionDown()}>

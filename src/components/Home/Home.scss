@@ -8,21 +8,29 @@
         text-align: center;
         z-index: 1;
         top: 90px;
-        width: 70%;
-        margin: 0 15%;
 
         h1 { font-size: 2rem }
         p { font-size: 1.3rem }
 
         @media (min-width: 768px) {
             top: 10%;
-            right: 4%;
-            white-space: nowrap;
+            right: 8%;
+            left: 5%;
             text-align: right;
-            
+
+            h1 { font-size: 2.7rem }
+            p { font-size: 1.5rem }
+        }
+
+        @media (min-width: 992px) {
+            h1 { font-size: 2.9rem }
+            p { font-size: 1.7rem }
+         }
+
+         @media (min-width: 1200px) {
             h1 { font-size: 3.15rem }
             p { font-size: 1.9rem }
-        }
+         }
 
         a {
             color: #4b9aef;
