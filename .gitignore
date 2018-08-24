@@ -30,5 +30,6 @@ build/Release
 node_modules
 
 # Ignore build files
+docs
 public
 .idea
