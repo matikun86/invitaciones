@@ -15,8 +15,8 @@ export default class Navigation extends React.PureComponent {
 
   static defaultProps = {
     center: {
-      lat: -38.036900,
-      lng: -57.585318
+      lat: -38.1004268,
+      lng: -57.5619607,
     },
     zoom: 15
   };
@@ -40,7 +40,7 @@ export default class Navigation extends React.PureComponent {
   getMapOptions(maps) {
     return {
       // gestureHandling:'cooperative',
-      // mapTypeId: maps.MapTypeId.SATELLITE,
+      mapTypeId: maps.MapTypeId.SATELLITE,
     }
   }
 
