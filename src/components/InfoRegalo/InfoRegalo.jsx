@@ -7,7 +7,7 @@ const InfoRegalo = () => (
     <div className="align-self-center text-center mx-auto">
         <h1>En caso de regalo use el chanchito...</h1>
         <img className="piggy-bank mt-3 mb-4" src={piggyBank} />
-        <p>No tenedremos lista de regalos, pero en el salon vamos a tener una caja para quien quiera colaborar con nuestra luna de miel</p>
+        <p class="small">No tenedremos lista de regalos, pero en el salon vamos a tener una caja para quien quiera colaborar con nuestra luna de miel</p>
     </div>
 
     <a href="#" className="hint-arrow up text-dark" onClick={() => $.fn.fullpage.moveSectionUp()}>
