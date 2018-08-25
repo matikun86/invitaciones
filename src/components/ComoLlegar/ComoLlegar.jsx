@@ -41,6 +41,7 @@ export default class Navigation extends React.PureComponent {
     return {
       // gestureHandling:'cooperative',
       mapTypeId: maps.MapTypeId.HYBRID,
+      resetBoundsOnResize: true,
     }
   }
 
