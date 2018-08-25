@@ -3,26 +3,15 @@ import GoogleMapReact from 'google-map-react';
 
 const SIZE = 30;
 
-export default class Navigation extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isInfoVisible: true,
-    }
-
-    this.toggleInfo = this.toggleInfo.bind(this);
-  }
-
-  toggleInfo() {
-    this.setState({ isInfoVisible: !this.state.isInfoVisible });
-  }
-
+export default class Navigation extends React.PureComponent {
   render() {
     return (
       <div className="marker-info">
-        {this.state.isInfoVisible && <p className="info">{this.props.info}</p>}
-        <img onClick={this.toggleInfo} width={SIZE} height={SIZE} src={this.props.image} />
+        <p className="info">
+          <span className="mb-2">{this.props.info}</span>
+          <a href="https://goo.gl/maps/Mx8QiufFVSK2">Cómo llegar <i className="material-icons ml-2">directions</i></a>
+        </p>
+        <img  width={SIZE} height={SIZE} src={this.props.image} />
       </div>
     );
   }

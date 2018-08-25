@@ -40,7 +40,7 @@ export default class Navigation extends React.PureComponent {
   getMapOptions(maps) {
     return {
       // gestureHandling:'cooperative',
-      // mapTypeId: maps.MapTypeId.SATELLITE,
+      mapTypeId: maps.MapTypeId.HYBRID,
     }
   }
 
@@ -59,7 +59,7 @@ export default class Navigation extends React.PureComponent {
               lat={this.props.center.lat}
               lng={this.props.center.lng}
               image={marker}
-              info="Mar Eventos (Mirador 9), Ruta 11 paraje Alfar."
+              info="Mar Eventos (Mirador 9), Ruta 11 paraje Alfar"
             />
           </GoogleMapReact>
         </div>

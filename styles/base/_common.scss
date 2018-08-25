@@ -94,3 +94,10 @@
         transform: translateY(-10px)
     }
 }
+
+a {
+  color: #4b9aef;
+  &:hover {
+    text-decoration: none;
+  }
+}

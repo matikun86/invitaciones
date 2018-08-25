@@ -1,0 +1,40 @@
+h1 {
+    font-size: 2.7rem;
+
+    @media (min-width: 768px) {
+        // font-size: 2.9rem
+    }
+    @media (min-width: 992px) {
+        // font-size: 3.15rem;
+    }
+    @media (min-width: 1200px) {
+        // font-size: 3.4rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+
+    @media (min-width: 768px) {
+        font-size: 2.7rem;
+    }
+    @media (min-width: 992px) {
+        font-size: 2.9rem;
+    }
+    @media (min-width: 1200px) {
+        font-size: 3.15rem;
+    }
+}
+
+p {
+    font-size: 1.3rem;
+    @media (min-width: 768px) {
+        font-size: 1.5rem;
+    }
+    @media (min-width: 992px) {
+        font-size: 1.7rem;
+    }
+    @media (min-width: 1200px) {
+        font-size: 1.9rem;
+    }
+}
