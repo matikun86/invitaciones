@@ -11,7 +11,7 @@ const Home = () => (
       <p>
         <a href="#asistencia" className="d-inline-block d-md-none">Confirmanos tu presencia</a>
         <a href="#mapa" className="d-none d-md-inline-block">Confirmanos tu presencia</a>
-        &nbsp;antes del 09 Noviembre.
+        &nbsp;antes del 09 de Noviembre.
       </p>
     </div>
 

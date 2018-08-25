@@ -11,8 +11,8 @@ export default class Navigation extends React.PureComponent {
 
     this.state = {
       center: {
-        lat: -38.1004268,
-        lng: -57.5619607,
+        lat: -38.1020469,
+        lng: -57.5575859,
       },
       zoom: 15
     };
