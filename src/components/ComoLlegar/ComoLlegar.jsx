@@ -11,6 +11,10 @@ export default class Navigation extends React.PureComponent {
 
     this.state = {
       center: {
+        lat: -38.099514,
+        lng: -57.5575859,
+      },
+      place: {
         lat: -38.1020469,
         lng: -57.5575859,
       },
@@ -58,8 +62,8 @@ export default class Navigation extends React.PureComponent {
             resetBoundsOnResize={true}
           >
             <MarkerInfo
-              lat={this.state.center.lat}
-              lng={this.state.center.lng}
+              lat={this.state.place.lat}
+              lng={this.state.place.lng}
               image={marker}
               info="Mar Eventos (Mirador 9), Ruta 11 paraje Alfar"
             />
