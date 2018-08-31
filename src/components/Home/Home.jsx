@@ -7,7 +7,7 @@ const Home = () => (
     
     <div className="overlay">
       <h1>Nos casamos! Y decidimos viajar para festejarlo con vos.</h1>
-      <p>15 de Diciembre 19hs - Ceremonia y Fiesta: <a href="#mapa">Mar Eventos (Mirador 9)</a></p>
+      <p>15 de Diciembre 19:30hs - Ceremonia y Fiesta: <a href="#mapa">Mar Eventos (Mirador 9)</a></p>
       <p>
         <a href="#asistencia" className="d-inline-block d-md-none">Confirmanos tu presencia</a>
         <a href="#mapa" className="d-none d-md-inline-block">Confirmanos tu presencia</a>
